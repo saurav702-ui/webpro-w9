@@ -1,20 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 10 Homework</title>
+
+    <meta name="description" content="Saurav's Web Programming coursework portfolio at Gachon University.">
+
+    <title>Saurav | Web Programming Coursework</title>
+
+    <style>
+
+        :root {
+            --bg: #0f172a;
+            --card: #17243a;
+            --primary: #38bdf8;
+            --text: #f1f5f9;
+            --muted: #a8b7cc;
+            --line: #30415b;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        a:focus-visible {
+            outline: 3px solid #facc15;
+            outline-offset: 4px;
+        }
+
+        header {
+            background: var(--card);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 85px 20px;
+            background: linear-gradient(135deg, #111c30, #172c48);
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 50px);
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: var(--muted);
+            margin: 8px 0;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 12px 6px 0;
+            padding: 11px 20px;
+            border-radius: 8px;
+            background: var(--primary);
+            color: #071426;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button.secondary {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .button:hover {
+            opacity: 0.85;
+        }
+
+        section {
+            width: min(1080px, 90%);
+            margin: auto;
+            padding: 55px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin: 0 0 10px;
+        }
+
+        .section-intro {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 24px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 10px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #243b58;
+            color: #7dd3fc;
+            font-size: 12px;
+        }
+
+        .info-list {
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--card);
+            color: var(--muted);
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero {
+                padding: 60px 18px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-    <h1>Week 9 Web Programming Homework</h1>
+    <!-- Navigation -->
 
-    <h2>Student Information</h2>
+    <header>
 
-    <p>Name: SAURAV</p>
-    <p>University: Gachon University</p>
-    <p>Major: Computer Engineering</p>
-    <p>Date: November 13, 2026</p>
+        <a class="logo" href="#home">Saurav.</a>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#assignment">Assignment</a>
+            <a href="#learning">Learning</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <section class="hero" id="home">
+
+            <p>WEB PROGRAMMING · COURSEWORK PORTFOLIO</p>
+
+            <h1>
+                Building the web,
+                <span>step by step.</span>
+            </h1>
+
+            <p>Hello! I'm Saurav.</p>
+
+            <p>Computer Engineering Student · Gachon University</p>
+
+            <p>
+                Welcome to my Web Programming coursework portfolio.
+                Here I share my assignments and programming journey.
+            </p>
+
+            <a class="button" href="#assignment">
+                Explore Assignment
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/saurav702"
+               target="_blank"
+               rel="noopener noreferrer">
+                My GitHub
+            </a>
+
+        </section>
+
+
+        <!-- About Section -->
+
+        <section id="about">
+
+            <h2 class="section-title">About Me</h2>
+
+            <p class="section-intro">
+                A little introduction about myself.
+            </p>
+
+            <div class="card">
+
+                <h3>Hello, I'm Saurav!</h3>
+
+                <p>
+                    I am a Computer Engineering student at
+                    Gachon University in South Korea.
+                </p>
+
+                <p>
+                    I am interested in programming, technology,
+                    software development and web development.
+                </p>
+
+                <p>
+                    This website represents my learning journey
+                    and practical work in Web Programming.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Assignment Section -->
+
+        <section id="assignment">
+
+            <h2 class="section-title">Week 10_2 Homework</h2>
+
+            <p class="section-intro">
+                My Web Programming coursework and GitHub project.
+            </p>
+
+            <div class="grid">
+
+                <!-- Repository Card -->
+
+                <article class="card">
+
+                    <span class="tag">GitHub Repository</span>
+
+                    <h3>Webpro-W9</h3>
+
+                    <p>
+                        A public GitHub repository containing
+                        my Web Programming homework files.
+                    </p>
+
+                    <p>
+                        <strong>Repository:</strong> webpro-w9
+                    </p>
+
+                    <a class="button"
+                       href="https://github.com/saurav702/webpro-w9"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Repository
+                    </a>
+
+                </article>
+
+
+                <!-- Website Card -->
+
+                <article class="card">
+
+                    <span class="tag">GitHub Pages</span>
+
+                    <h3>Live Website</h3>
+
+                    <p>
+                        My website is hosted using GitHub Pages.
+                        It demonstrates HTML and CSS web development.
+                    </p>
+
+                    <a class="button"
+                       href="https://saurav702.github.io/webpro-w9/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Live Website
+                    </a>
+
+                </article>
+
+
+                <!-- Assignment Card -->
+
+                <article class="card">
+
+                    <span class="tag">Week 10_2</span>
+
+                    <h3>Assignment Information</h3>
+
+                    <p>
+                        This project is part of my Web Programming
+                        coursework at Gachon University.
+                    </p>
+
+                    <p>
+                        The project uses HTML, CSS, GitHub
+                        and GitHub Pages.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Learning Section -->
+
+        <section id="learning">
+
+            <h2 class="section-title">What I Learned</h2>
+
+            <p class="section-intro">
+                Skills and concepts practiced during this assignment.
+            </p>
+
+            <div class="card">
+
+                <ul class="info-list">
+
+                    <li>Understanding HTML document structure.</li>
+
+                    <li>Using CSS to design web pages.</li>
+
+                    <li>Creating and managing GitHub repositories.</li>
+
+                    <li>Uploading files directly to GitHub.</li>
+
+                    <li>Understanding GitHub Pages deployment.</li>
+
+                    <li>Creating responsive websites for different devices.</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- Contact Section -->
+
+        <section id="contact">
+
+            <h2 class="section-title">Connect With Me</h2>
+
+            <div class="card">
+
+                <h3>Find Me on GitHub</h3>
+
+                <p>
+                    Visit my GitHub profile to explore
+                    my repositories and programming projects.
+                </p>
+
+                <a class="button"
+                   href="https://github.com/saurav702"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub Profile
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>Web Programming · Gachon University</p>
+
+        <p>Created by Saurav · 2026</p>
+
+    </footer>
 
 </body>
+
 </html>
